@@ -66,7 +66,7 @@
 </head>
 <body>
     <!-- Audio Embed -->
-    <audio id="myAudio" autoplay muted>
+    <audio id="myAudio">
       <source src="https://pritom-360.github.io/birthday-surprise/project/assets/audio/3io1w7.wav" type="audio/wav">
       Your browser does not support the audio element.
     </audio>
@@ -80,7 +80,7 @@
                 তুমি সবসময় হাসিখুশি থাকো আর জীবনে অনেক বড় হও।  
                 আজকের দিনটা দারুণ উপভোগ করো! 💖
             </p>
-            <button class="btn-custom" onclick="showGift()">সারপ্রাইজের জন্য ক্লিক কর</button>
+            <button class="btn-custom" onclick="showGift(); playAudio();">সারপ্রাইজের জন্য ক্লিক কর</button>
 
             <div id="giftContent" class="hidden-content">
                 <h2>🎁 Bongo Subscription Gift Card</h2>
@@ -106,10 +106,10 @@
             giftContent.style.display = 'block';
         }
 
-        window.addEventListener('load', function() {
+        function playAudio() {
             var audio = document.getElementById('myAudio');
             audio.play();
-        });
+        }
     </script>
 </body>
 </html>
